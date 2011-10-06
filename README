@@ -1,1 +1,7 @@
-My personal dot files
+My personal dot/config files
+
+.bashrc               bash config; place in home dir
+.emacs                emacs config; place in home dir
+.screenrc             Makes GNU Screen far more awesome; place in home dir
+irssi-hilightwin.pl   Place in ~/.irssi/scripts/autorun/
+site-lisp/            Place in ~/.emacs.d/
