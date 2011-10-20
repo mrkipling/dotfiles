@@ -45,6 +45,9 @@
 (require 'color-theme)
 (color-theme-initialize)
 
+;; LESS CSS mode
+(require 'less-css-mode)
+
 ;; F5: goto line
 (global-set-key [f5] 'goto-line)
 
