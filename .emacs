@@ -12,7 +12,6 @@
 
 ;; load paths
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/themes/")
 
 ;; Store temporary files out of current directory
 (defvar user-temporary-file-directory
