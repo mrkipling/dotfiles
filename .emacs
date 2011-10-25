@@ -40,6 +40,9 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
 (autoload 'javascript-mode "javascript" nil t)
 
+;; basic JavaScript mode indent level
+(setq js-indent-level 2)
+
 ;; color themes
 (require 'color-theme)
 (color-theme-initialize)
