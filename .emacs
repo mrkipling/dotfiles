@@ -54,6 +54,10 @@
 (require 'django-html-mode)
 (add-to-list 'auto-mode-alist '("\\.html$" . django-html-mode))
 
+;; Speedbar
+;; (uncomment to load and bind to F4)
+;;(global-set-key [(f4)] 'speedbar-get-focus)
+
 ;; F5: goto line
 (global-set-key [f5] 'goto-line)
 
