@@ -50,6 +50,10 @@
 ;; LESS CSS mode
 (require 'less-css-mode)
 
+;; Django HTML mode
+(require 'django-html-mode)
+(add-to-list 'auto-mode-alist '("\\.html$" . django-html-mode))
+
 ;; F5: goto line
 (global-set-key [f5] 'goto-line)
 
