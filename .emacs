@@ -60,6 +60,9 @@
 ;; F6: query replace
 (global-set-key [f6] 'query-replace)
 
+;; F7: delete trailing whitespace
+(global-set-key [f7] 'delete-trailing-whitespace)
+
 ;; F9-n toggles night mode (enabled by default)
 (defun toggle-night-color-theme ()
   "Switch to/from night color scheme."
