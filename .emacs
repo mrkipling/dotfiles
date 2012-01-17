@@ -77,6 +77,10 @@
 (global-set-key (kbd "<f9> n") 'toggle-night-color-theme)
 (toggle-night-color-theme) ; switch to night mode by default
 
+;; C-< and C-> to decrease/increase left margin
+(global-set-key (kbd "C-<") 'decrease-left-margin)
+(global-set-key (kbd "C->") 'increase-left-margin)
+
 ;; disable exit emacs via C-x C-c (useful if not using in a terminal)
 ;;(defun learn ()
 ;;  (interactive)
