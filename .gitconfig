@@ -1,0 +1,13 @@
+[core]
+	editor = emacs
+[color]
+	ui = true
+[user]
+	name = Brad Abrahams
+	email = email@bradabrahams.co.uk
+[alias]
+        st = status
+        co = checkout
+        df = diff
+        dc = diff --cached
+        lol = log --graph --decorate --pretty=oneline --abbrev-commit
