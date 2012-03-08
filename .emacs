@@ -47,6 +47,10 @@
 (require 'color-theme)
 (color-theme-initialize)
 
+(eval-after-load "color-theme"
+  '(progn
+     (color-theme-dark-laptop)))
+
 ;; LESS CSS mode
 (require 'less-css-mode)
 
@@ -62,20 +66,6 @@
 
 ;; F7: delete trailing whitespace
 (global-set-key [f7] 'delete-trailing-whitespace)
-
-;; F9-n toggles night mode (enabled by default)
-(defun toggle-night-color-theme ()
-  "Switch to/from night color scheme."
-  (interactive)
-  (require 'color-theme)
-  (if (eq (frame-parameter (next-frame) 'background-mode) 'dark)
-      (color-theme-snapshot) ; restore default (light) colors
-    ;; create the snapshot if necessary
-    (when (not (commandp 'color-theme-snapshot))
-      (fset 'color-theme-snapshot (color-theme-make-snapshot)))
-    (color-theme-dark-laptop)))
-(global-set-key (kbd "<f9> n") 'toggle-night-color-theme)
-(toggle-night-color-theme) ; switch to night mode by default
 
 ;; C-< and C-> to decrease/increase left margin
 (global-set-key (kbd "C-<") 'decrease-left-margin)
