@@ -117,34 +117,23 @@ function restoredb {
     cat ~/db_dumps/$1 | mysql -uroot $2
 }
 
-function parse_git_branch {
-    if [ -n "$(git status 2>&1 | grep -v '^fatal: Not a git repository')" ]; then
-        echo $(git branch | grep '\*' | awk '{ print $2 }')
-    else
-        echo "Not on a branch."
-    fi
-}
+# copy with progress bar
+# https://chris-lamb.co.uk/2008/01/24/can-you-get-cp-to-give-a-progress-bar-like-wget/
 
-function fr {
-    local git_branch
-    local parsed_git_branch
-
-    if [ $1 ]; then
-        git_branch=$1
-    else
-        parsed_git_branch=$(parse_git_branch)
-        if [ -n "$(echo $parsed_git_branch | grep 'Not on a branch.')" ]; then
-            echo "Not on a branch."
-            return 0
-        else
-            git_branch=$parsed_git_branch
-            echo "On branch $git_branch"
-        fi
-    fi
-
-    echo "Fetching..."
-    git fetch
-
-    echo "Rebasing origin/$git_branch..."
-    git rebase origin/$parsed_git_branch
+function cp_p() {
+   strace -q -ewrite cp -- "${1}" "${2}" 2>&1 \
+      | awk '{
+        count += $NF
+            if (count % 10 == 0) {
+               percent = count / total_size * 100
+               printf "%3d%% [", percent
+               for (i=0;i<=percent;i++)
+                  printf "="
+               printf ">"
+               for (i=percent;i<100;i++)
+                  printf " "
+               printf "]\r"
+            }
+         }
+         END { print "" }' total_size=$(stat -c '%s' "${1}") count=0
 }
