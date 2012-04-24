@@ -36,12 +36,17 @@
 ;; new files should use UNIX line endings
 (setq default-buffer-file-coding-system 'unix)
 
-;; add JavaScript mode
-(add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
-(autoload 'javascript-mode "javascript" nil t)
+;; js2-mode (advanced JavaScript mode)
+;; https://github.com/mooz/js2-mode
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+;;JavaScript mode
+;;(add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
+;;(autoload 'javascript-mode "javascript" nil t)
 
 ;; basic JavaScript mode indent level
-(setq js-indent-level 2)
+;;(setq js-indent-level 2)
 
 ;; color themes
 (require 'color-theme)
