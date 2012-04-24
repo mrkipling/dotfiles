@@ -3,6 +3,7 @@
  '(css-indent-offset 2)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
+ '(js2-mirror-mode t)
  '(menu-bar-mode t)
  '(standard-indent 2)
  '(tool-bar-mode nil)
