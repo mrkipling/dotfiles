@@ -6,7 +6,7 @@
  '(js2-mirror-mode nil)
  '(js2-mode-escape-quotes nil)
  '(menu-bar-mode t)
- '(standard-indent 2)
+ '(standard-indent 4)
  '(tool-bar-mode nil)
  '(transient-mark-mode t))
 (custom-set-faces
@@ -48,7 +48,7 @@
 ;;(autoload 'javascript-mode "javascript" nil t)
 
 ;; basic JavaScript mode indent level
-;;(setq js-indent-level 2)
+;;(setq js-indent-level 4)
 
 ;; color themes
 (require 'color-theme)
