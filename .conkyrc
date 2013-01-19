@@ -1,48 +1,24 @@
 alignment tr
-
 background no
-
 cpu_avg_samples 2
-
 net_avg_samples 2
-
 use_xft yes
-
 xftfont Droid Sans Mono:size=10
-
 update_interval 1
-
 own_window no
-
 double_buffer yes
-
 draw_shades no
-
 draw_outline no
-
 draw_borders no
-
 stippled_borders 10
-
 border_width 1
-
 default_color white
-
 default_outline_color white
-
 gap_x 50
-
 gap_y 50
-
 no_buffers yes
-
 uppercase no
-
 pad_percents 2
-
-
-
-
 
 TEXT
 
