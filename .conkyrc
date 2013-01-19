@@ -36,4 +36,4 @@ ${cpugraph cpu1 25,110 42AE4A eeeeee} $alignr${cpugraph cpu2 25,110 42AE4A eeeee
 RAM: $alignr$mem / $memmax ($memperc%)
 ${membar 6, 230}
 
-${execpi 60 python ~/.conky/xbmc.py}
+${execpi 30 python ~/.conky/xbmc.py}
