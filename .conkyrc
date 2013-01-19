@@ -46,6 +46,12 @@ ${color #ffffff}Stats:
 
 
 
+${color #ffffff}Notifications:
+
+  Unread mail: ${color #ffffff}${execpi 60 python ~/.conky/gmail.py}
+
+
+
 ${color #ffffff}CPU and RAM:
 
   ${color #ffffff}Average
