@@ -45,6 +45,8 @@ uppercase no
 TEXT
 
 Uptime:    $uptime
+Local IP:  $addr
+WAN IP:    ${execi 600 ~/.conky/ip.sh}
 New mail:  ${execpi 60 python ~/.conky/gmail.py}
 
 
