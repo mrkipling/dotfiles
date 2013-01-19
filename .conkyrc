@@ -8,7 +8,7 @@ net_avg_samples 2
 
 use_xft yes
 
-xftfont Bitstream Vera Sans Mono:size=10
+xftfont Droid Sans Mono:size=10
 
 update_interval 1
 
@@ -45,9 +45,7 @@ uppercase no
 TEXT
 
 Uptime:    $uptime
-
 New mail:  ${execpi 60 python ~/.conky/gmail.py}
-
 
 
 CPU and RAM ${color #333333}${hr 2}${color #ffffff}
