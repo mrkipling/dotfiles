@@ -26,7 +26,7 @@ try:
         elif currently_playing['type'] == 'episode':
             print "Show: ${alignr}%s" % trunc(currently_playing['showtitle'])
             print "Episode: ${alignr}%s" % trunc(currently_playing['label'])
-            print "Number: ${alignr}%sx%s" % (currently_playing['season'], ("%02d" % (currently_playing['season'],)))
+            print "Number: ${alignr}%sx%s" % (currently_playing['season'], ("%02d" % (currently_playing['episode'],)))
 
         elif currently_playing['type'] == 'tvshow':
             print "TV: ${alignr}%s" % trunc(currently_playing['label'])
