@@ -38,21 +38,25 @@ no_buffers yes
 
 uppercase no
 
+
+
+
+
 TEXT
 
-${color #ffffff}Uptime:    $uptime
+Uptime:    $uptime
 
-${color #ffffff}New mail:  ${execpi 60 python ~/.conky/gmail.py}
+New mail:  ${execpi 60 python ~/.conky/gmail.py}
 
 
 
-${color #ffffff}CPU and RAM:
+CPU and RAM ${color #333333}${hr 2}${color #ffffff}
 
-  ${color #ffffff}Average
-  ${cpugraph cpu0 42AE4A eeeeee}
+Average
+${cpugraph cpu0 42AE4A eeeeee}
 
-  Core 1 $alignr Core 2
-  ${cpugraph cpu1 25,110 42AE4A eeeeee} $alignr${cpugraph cpu2 25,110 42AE4A eeeeee}
+Core 1 $alignr Core 2
+${cpugraph cpu1 25,110 42AE4A eeeeee} $alignr${cpugraph cpu2 25,110 42AE4A eeeeee}
 
-  ${color #ffffff}RAM:$color $mem / $memmax ($memperc%)
-  ${membar 6, 230}
+RAM: $mem / $memmax ($memperc%)
+${membar 6, 230}
