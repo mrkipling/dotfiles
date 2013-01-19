@@ -51,11 +51,13 @@ Local IP: $alignr$addr
 WAN IP: $alignr${execi 600 ~/.conky/ip.sh}
 Mail: $alignr${execi 60 python ~/.conky/gmail.py} unread
 
+
 CPU and RAM ${color #333333}${hr 2}${color #ffffff}
 
 Average CPU usage
 ${cpugraph cpu0 42AE4A eeeeee}
 ${cpugraph cpu1 25,110 42AE4A eeeeee} $alignr${cpugraph cpu2 25,110 42AE4A eeeeee}
-
 RAM: $alignr$mem / $memmax ($memperc%)
 ${membar 6, 230}
+
+${execpi 60 python ~/.conky/xbmc.py}
