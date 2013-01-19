@@ -40,15 +40,9 @@ uppercase no
 
 TEXT
 
-${color #ffffff}Stats:
+${color #ffffff}Uptime:    $uptime
 
-  ${color #ffffff}Uptime: ${color}$uptime
-
-
-
-${color #ffffff}Notifications:
-
-  Unread mail: ${color #ffffff}${execpi 60 python ~/.conky/gmail.py}
+${color #ffffff}New mail:  ${execpi 60 python ~/.conky/gmail.py}
 
 
 
