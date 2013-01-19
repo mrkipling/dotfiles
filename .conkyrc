@@ -1,0 +1,58 @@
+alignment tr
+
+background no
+
+cpu_avg_samples 2
+
+net_avg_samples 2
+
+use_xft yes
+
+xftfont Bitstream Vera Sans Mono:size=10
+
+update_interval 1
+
+own_window no
+
+double_buffer yes
+
+draw_shades no
+
+draw_outline no
+
+draw_borders no
+
+stippled_borders 10
+
+border_width 1
+
+default_color white
+
+default_outline_color white
+
+gap_x 50
+
+gap_y 50
+
+no_buffers yes
+
+uppercase no
+
+TEXT
+
+${color #ffffff}Stats:
+
+  ${color #ffffff}Uptime: ${color}$uptime
+
+
+
+${color #ffffff}CPU and RAM:
+
+  ${color #ffffff}Average
+  ${cpugraph cpu0 42AE4A eeeeee}
+
+  Core 1 $alignr Core 2
+  ${cpugraph cpu1 25,110 42AE4A eeeeee} $alignr${cpugraph cpu2 25,110 42AE4A eeeeee}
+
+  ${color #ffffff}RAM:$color $mem / $memmax ($memperc%)
+  ${membar 6, 230}
