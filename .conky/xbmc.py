@@ -1,7 +1,7 @@
 import jsonrpclib
 
 def trunc(str, amt=20):
-    return str[:amt].strip() + '...' if len(str) > amt else str
+    return str[:amt].strip() + '...' if len(str) > amt + 2 else str
 
 try:
     xbmc = jsonrpclib.Server("http://user:pass@xbmcurl:8080/jsonrpc")
