@@ -28,6 +28,9 @@ try:
             print "Episode: ${alignr}%s" % trunc(currently_playing['label'])
             print "Number: ${alignr}%sx%s" % (currently_playing['season'], ("%02d" % (currently_playing['season'],)))
 
+        elif currently_playing['type'] == 'tvshow':
+            print "TV: ${alignr}%s" % trunc(currently_playing['label'])
+
         if percentage_progress != 0:
             print "Progress: ${alignr}%s" % percentage_progress + '%'
             print "${execbar echo \"%s\"}" % percentage_progress
