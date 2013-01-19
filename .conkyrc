@@ -38,6 +38,8 @@ no_buffers yes
 
 uppercase no
 
+pad_percents 2
+
 
 
 
