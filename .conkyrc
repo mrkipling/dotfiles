@@ -52,10 +52,8 @@ New mail:  ${execpi 60 python ~/.conky/gmail.py}
 
 CPU and RAM ${color #333333}${hr 2}${color #ffffff}
 
-Average
+Average CPU usage
 ${cpugraph cpu0 42AE4A eeeeee}
-
-Core 1 $alignr Core 2
 ${cpugraph cpu1 25,110 42AE4A eeeeee} $alignr${cpugraph cpu2 25,110 42AE4A eeeeee}
 
 RAM: $mem / $memmax ($memperc%)
