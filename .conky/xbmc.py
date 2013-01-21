@@ -21,7 +21,7 @@ try:
                 print "Year: ${alignr}%s" % currently_playing['year']
 
             else:
-                print "Channel: ${alignr}%s" % trunc(currently_playing['label'])
+                print "Video: ${alignr}%s" % trunc(currently_playing['label'])
 
         elif currently_playing['type'] == 'episode':
             print "Show: ${alignr}%s" % trunc(currently_playing['showtitle'])
