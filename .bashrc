@@ -10,8 +10,8 @@ alias delpyc='find -name "*.pyc" -delete'
 # Custom functions
 
 function fname() { find . -iname "*$@*"; }
-function dumpdb { mysqldump -u root --databases $1 > ~/db_dumps/$2 }
-function restoredb { cat ~/db_dumps/$1 | mysql -uroot $2 }
+function dumpdb { mysqldump -u root --databases $1 > ~/db_dumps/$2; }
+function restoredb { cat ~/db_dumps/$1 | mysql -uroot $2; }
 
 # copy with progress bar
 # https://chris-lamb.co.uk/2008/01/24/can-you-get-cp-to-give-a-progress-bar-like-wget/
