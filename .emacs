@@ -38,6 +38,9 @@
 ;; new files should use UNIX line endings
 (setq default-buffer-file-coding-system 'unix)
 
+;; get rid of initial scratch message
+(setq initial-scratch-message nil)
+
 ;; js2-mode (advanced JavaScript mode)
 ;; https://github.com/mooz/js2-mode
 (autoload 'js2-mode "js2-mode" nil t)
