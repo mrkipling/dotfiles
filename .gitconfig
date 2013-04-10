@@ -1,13 +1,17 @@
 [core]
-	editor = emacs
+    editor = emacs
+
 [color]
-	ui = true
+    ui = true
+
 [user]
-	name = Brad Abrahams
-	email = email@bradabrahams.co.uk
+    name = Brad Abrahams
+    email = email@bradabrahams.co.uk
+
 [alias]
-        st = status
-        co = checkout
-        df = diff
-        dc = diff --cached
-        lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    st = status
+    co = checkout
+    cm = commit -m
+    df = diff
+    dc = diff --cached
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
