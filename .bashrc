@@ -13,6 +13,14 @@ function fname() { find . -iname "*$@*"; }
 function dumpdb { mysqldump -u root --databases $1 > ~/db_dumps/$2; }
 function restoredb { cat ~/db_dumps/$1 | mysql -uroot $2; }
 
+# GPG
+
+alias gpg-import='gpg --import ~/Downloads/address.txt'
+
+function gpg-encrypt {
+    gpg --recipient $1 --output ~/Downloads/message.gpg --armor --encrypt ~/Downloads/message.txt
+}
+
 # copy with progress bar
 # https://chris-lamb.co.uk/2008/01/24/can-you-get-cp-to-give-a-progress-bar-like-wget/
 
