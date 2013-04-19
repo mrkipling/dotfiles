@@ -6,6 +6,7 @@
  '(js2-mirror-mode nil)
  '(js2-mode-escape-quotes nil)
  '(menu-bar-mode t)
+ '(sgml-basic-offset 4)
  '(standard-indent 4)
  '(tool-bar-mode nil)
  '(transient-mark-mode t))
