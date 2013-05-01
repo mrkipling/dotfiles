@@ -78,6 +78,9 @@
 ;; F7: delete trailing whitespace
 (global-set-key [f7] 'delete-trailing-whitespace)
 
+;; F8: switch windows
+(global-set-key [f8] 'other-window)
+
 ;; C-< and C-> to decrease/increase left margin
 (global-set-key (kbd "C-<") 'decrease-left-margin)
 (global-set-key (kbd "C->") 'increase-left-margin)
