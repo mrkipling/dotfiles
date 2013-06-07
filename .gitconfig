@@ -14,4 +14,4 @@
     cm = commit -m
     df = diff
     dc = diff --cached
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
