@@ -1,6 +1,6 @@
 ;; custom set variables (do not edit)
 (custom-set-variables
- '(css-indent-offset 2)
+ '(css-indent-offset 4)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(js2-mirror-mode nil)
