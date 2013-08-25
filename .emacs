@@ -47,6 +47,11 @@
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
+;; highlight-80+ mode
+;; enable with M-x highlight-80+-mode
+(add-to-list 'load-path "/path/to/highlight-80+")
+(require 'highlight-80+)
+
 ;; color themes
 (require 'color-theme)
 (color-theme-initialize)
