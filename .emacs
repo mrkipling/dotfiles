@@ -42,6 +42,15 @@
 ;; get rid of initial scratch message
 (setq initial-scratch-message nil)
 
+;; color themes
+(require 'color-theme)
+(color-theme-initialize)
+
+;; set my preferred color theme
+(eval-after-load "color-theme"
+  '(progn
+     (color-theme-dark-laptop)))
+
 ;; js2-mode (advanced JavaScript mode)
 ;; https://github.com/mooz/js2-mode
 (autoload 'js2-mode "js2-mode" nil t)
@@ -51,14 +60,6 @@
 ;; enable with M-x highlight-80+-mode
 (add-to-list 'load-path "/path/to/highlight-80+")
 (require 'highlight-80+)
-
-;; color themes
-(require 'color-theme)
-(color-theme-initialize)
-
-(eval-after-load "color-theme"
-  '(progn
-     (color-theme-dark-laptop)))
 
 ;; LESS CSS mode
 (require 'less-css-mode)
@@ -75,9 +76,6 @@
 
 ;; F7: delete trailing whitespace
 (global-set-key [f7] 'delete-trailing-whitespace)
-
-;; F8: switch windows
-(global-set-key [f8] 'other-window)
 
 ;; C-< and C-> to decrease/increase left margin
 (global-set-key (kbd "C-<") 'decrease-left-margin)
