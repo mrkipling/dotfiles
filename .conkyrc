@@ -36,4 +36,13 @@ ${cpugraph cpu1 25,125 42AE4A eeeeee} $alignr${cpugraph cpu2 25,125 42AE4A eeeee
 RAM: $alignr$mem / $memmax ($memperc%)
 ${membar 6, 260}
 
+
+Network ${color #333333}${hr 2}${color #ffffff}
+${if_existing /proc/net/route eth0}
+Up ${alignr}${upspeed eth0}
+Down ${alignr}${downspeed eth0}
+Upload ${alignr}${totalup eth0}
+Download ${alignr}${totaldown eth0}
+${endif}
+
 ${execpi 30 python ~/.conky/xbmc.py}
