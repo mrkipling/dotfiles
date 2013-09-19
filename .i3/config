@@ -148,8 +148,11 @@ bar {
 ###################
 
 # multiple monitors with correct orientation
-# you might want to comment this out if you're only using one monitor!
-exec --no-startup-id xrandr --output DVI-1 --auto --right-of DVI-0
+# you might want to un-comment this if you're using two monitors
+#exec --no-startup-id xrandr --output DVI-1 --auto --right-of DVI-0
+
+# disable caps lock
+exec --no-startup-id xmodmap ~/.xmodmap
 
 
 
