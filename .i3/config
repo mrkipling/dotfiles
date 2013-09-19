@@ -168,3 +168,4 @@ bindsym Ctrl+Mod1+Left workspace prev
 
 # lock screen
 bindsym Ctrl+Mod1+l exec i3lock
+bindsym $mod+Shift+Return exec nautilus --no-desktop # nautilus
