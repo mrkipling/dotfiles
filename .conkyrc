@@ -37,8 +37,8 @@ RAM: $alignr$mem / $memmax ($memperc%)
 ${membar 6, 260}
 
 
-Network ${color #333333}${hr 2}${color #ffffff}
 ${if_existing /proc/net/route eth0}
+Network ${color #333333}${hr 2}${color #ffffff}
 Up ${alignr}${upspeed eth0}
 Down ${alignr}${downspeed eth0}
 Upload ${alignr}${totalup eth0}
