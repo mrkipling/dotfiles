@@ -1,6 +1,7 @@
 ;; custom set variables (do not edit)
 (custom-set-variables
  '(css-indent-offset 4)
+ '(custom-safe-themes (quote ("f07583bdbcca020adecb151868c33820dfe3ad5076ca96f6d51b1da3f0db7105" default)))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(js2-mirror-mode nil)
@@ -21,7 +22,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 ;; load color theme
-(load-theme 'subdued)
+(load-theme 'dark-laptop)
 
 ;; default font (if not using in a terminal)
 ;; DejaVu can be installed on Ubuntu via apt (apt-get install ttf-dejavu)
