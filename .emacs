@@ -15,6 +15,14 @@
 
 ;; load paths
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+
+;; load color theme
+(load-theme 'subdued)
+
+;; default font (if not using in a terminal)
+;; DejaVu can be installed on Ubuntu via apt (apt-get install ttf-dejavu)
+;;(set-default-font "-unknown-DejaVu Sans Mono-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1")
 
 ;; Store temporary files out of current directory
 (defvar user-temporary-file-directory
@@ -29,10 +37,6 @@
 (setq auto-save-file-name-transforms
      `((".*" ,user-temporary-file-directory t)))
 
-;; default font (if not using in a terminal)
-;; DejaVu can be installed on Ubuntu via apt (apt-get install ttf-dejavu)
-;;(set-default-font "-unknown-DejaVu Sans Mono-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1")
-
 ;; show trailing whitespace by default
 (setq-default show-trailing-whitespace t)
 
@@ -42,24 +46,10 @@
 ;; get rid of initial scratch message
 (setq initial-scratch-message nil)
 
-;; color themes
-(require 'color-theme)
-(color-theme-initialize)
-
-;; set my preferred color theme
-(eval-after-load "color-theme"
-  '(progn
-     (color-theme-dark-laptop)))
-
 ;; js2-mode (advanced JavaScript mode)
 ;; https://github.com/mooz/js2-mode
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-
-;; highlight-80+ mode
-;; enable with M-x highlight-80+-mode
-(add-to-list 'load-path "/path/to/highlight-80+")
-(require 'highlight-80+)
 
 ;; LESS CSS mode
 (require 'less-css-mode)
