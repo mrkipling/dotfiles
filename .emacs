@@ -25,6 +25,8 @@
 
 ;; load color theme
 (load-theme 'dark-laptop)
+;;(load-theme 'solarized-light)
+;;(load-theme 'solarized-dark)
 
 ;; Store temporary files out of current directory
 (defvar user-temporary-file-directory
