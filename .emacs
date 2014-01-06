@@ -15,12 +15,9 @@
  '(tool-bar-mode nil)
  '(transient-mark-mode t))
 
-;; custom set faces
-;; uncomment if not using in a terminal
-;; Akkurat-Mono needs to be installed or changed to something else
-
-;;(custom-set-faces
-;; '(default ((t (:family "Akkurat-Mono" :foundry "unknown" :slant normal :weight normal :height 113 :width normal)))))
+;; default font
+;; uncomment if not using emacs in a terminal
+;;(set-face-attribute 'default nil :font "Akkurat-Mono-11")
 
 ;; load paths
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
