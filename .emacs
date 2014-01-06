@@ -50,6 +50,12 @@
 ;; get rid of initial scratch message
 (setq initial-scratch-message nil)
 
+
+
+
+
+;;=== CUSTOM MODES ===;;
+
 ;; js2-mode (advanced JavaScript mode)
 ;; https://github.com/mooz/js2-mode
 (autoload 'js2-mode "js2-mode" nil t)
@@ -61,6 +67,12 @@
 ;; Django HTML mode
 (require 'django-html-mode)
 (add-to-list 'auto-mode-alist '("\\.html$" . django-html-mode))
+
+
+
+
+
+;;=== KEYBOARD SHORTCUTS ===;;
 
 ;; F5: goto line
 (global-set-key [f5] 'goto-line)
