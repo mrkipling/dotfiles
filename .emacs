@@ -1,4 +1,4 @@
-;; custom set variables (do not edit)
+;; custom set variables
 (custom-set-variables
  '(css-indent-offset 4)
  '(custom-safe-themes (quote ("f07583bdbcca020adecb151868c33820dfe3ad5076ca96f6d51b1da3f0db7105" default)))
@@ -14,8 +14,13 @@
  '(standard-indent 4)
  '(tool-bar-mode nil)
  '(transient-mark-mode t))
-(custom-set-faces
- )
+
+;; custom set faces
+;; uncomment if not using in a terminal
+;; Akkurat-Mono needs to be installed or changed to something else
+
+;;(custom-set-faces
+;; '(default ((t (:family "Akkurat-Mono" :foundry "unknown" :slant normal :weight normal :height 113 :width normal)))))
 
 ;; load paths
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
@@ -23,10 +28,6 @@
 
 ;; load color theme
 (load-theme 'dark-laptop)
-
-;; default font (if not using in a terminal)
-;; DejaVu can be installed on Ubuntu via apt (apt-get install ttf-dejavu)
-;;(set-default-font "-unknown-DejaVu Sans Mono-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1")
 
 ;; Store temporary files out of current directory
 (defvar user-temporary-file-directory
