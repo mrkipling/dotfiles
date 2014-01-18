@@ -56,7 +56,11 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
 ;;        that Emacs seems to dislike
 (defvar solarized-colors           ; ANSI(Solarized terminal)
   ;; name     sRGB      Gen RGB   256       16              8
-  '((base03  "#002b36" "#042028" "#1c1c1c" "brightblack"   "black")
+
+  ;; Original theme background colour
+  ;;  '((base03  "#002b36" "#042028" "#1c1c1c" "brightblack"   "black")
+
+  '((base03  "#001d25" "#001d25" "#1c1c1c" "brightblack"   "black")
     (base02  "#073642" "#0a2832" "#262626" "black"         "black")
     (base01  "#586e75" "#465a61" "#585858" "brightgreen"   "green")
     (base00  "#657b83" "#52676f" "#626262" "brightyellow"  "yellow")
