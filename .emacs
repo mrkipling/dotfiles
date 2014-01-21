@@ -17,7 +17,7 @@
 
 ;; default font
 ;; uncomment if not using emacs in a terminal
-;;(set-face-attribute 'default nil :font "Akkurat-Mono-11")
+;;(set-face-attribute 'default nil :font "Inconsolata-12")
 
 ;; load paths
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
