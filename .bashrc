@@ -3,7 +3,7 @@
 
 # Custom aliases
 
-alias ls='ls -al --color'
+alias ls='ls -alh --color'
 alias sc='screen -dR'
 alias delpyc='find -name "*.pyc" -delete'
 
