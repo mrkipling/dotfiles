@@ -161,7 +161,7 @@ exec --no-startup-id xmodmap ~/.xmodmap
 exec --no-startup-id unclutter -display :0 -root -idle 1 &
 
 # set wallpaper (requires feh to be installed)
-#feh --bg-scale /path/to/image
+#exec --no-startup-id feh --bg-scale /home/brad/Pictures/wallpapers/glowen.jpg
 
 # start Conky
 #exec --no-startup-id conky &
