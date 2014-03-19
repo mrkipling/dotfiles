@@ -160,6 +160,12 @@ exec --no-startup-id xmodmap ~/.xmodmap
 # hide the mouse cursor after 1 second of inactivity
 exec --no-startup-id unclutter -display :0 -root -idle 1 &
 
+# set wallpaper (requires feh to be installed)
+#feh --bg-scale /path/to/image
+
+# start Conky
+#exec --no-startup-id conky &
+
 
 
 
