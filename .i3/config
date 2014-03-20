@@ -199,7 +199,7 @@ for_window [class="Shutter" instance="shutter"] floating enable
 
 
 
-### workspace assignment
+### application specific
 
 # Hangouts - workspace 4, floating enabled
 #for_window [class="Google-chrome" instance="crx_nckgahadagoaajjgafhacjanaoiihapd"] floating enable, move container to workspace number 4
