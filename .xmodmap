@@ -1,0 +1,6 @@
+!
+! Turn Caps Lock key into an extra Left Ctrl
+!
+keycode 66 = Control_L
+clear Lock
+add Control = Control_L

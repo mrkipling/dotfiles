@@ -3,6 +3,7 @@ My personal dot/config files
 .bashrc               bash config; place in home dir
 .gitconfig            git config; place in home dir
 .screenrc             makes GNU Screen far more awesome; place in home dir
+.xmodmap              turns Caps Lock into an extra Left Ctrl key (if using xmodmap)
 irssi-hilightwin.pl   Place in ~/.irssi/scripts/autorun/ (if using irssi)
 
 .conkyrc              Conky configuration
