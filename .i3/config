@@ -191,6 +191,11 @@ for_window [class="I3exit" instance="i3exit"] floating enable
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
+# volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pavol -i && killall -SIGUSR1 i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pavol -d && killall -SIGUSR1 i3status
+bindsym XF86AudioMute exec --no-startup-id pavol -t  && killall -SIGUSR1 i3status
+
 # print screen (requires shutter)
 bindsym Print exec --no-startup-id shutter -s # capture selection
 for_window [class="Shutter" instance="shutter"] floating enable
