@@ -193,6 +193,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # print screen (requires shutter)
 bindsym Print exec --no-startup-id shutter -s # capture selection
+for_window [class="Shutter" instance="shutter"] floating enable
 
 
 
