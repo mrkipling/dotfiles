@@ -157,6 +157,9 @@ exec --no-startup-id xbacklight -set 30
 # disable caps lock
 exec --no-startup-id xmodmap ~/.xmodmap
 
+# start network manager applet (from Gnome... it'll do for now)
+exec --no-startup-id nm-applet &
+
 # hide the mouse cursor after 1 second of inactivity
 exec --no-startup-id unclutter -display :0 -root -idle 1 &
 
