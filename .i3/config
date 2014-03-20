@@ -193,3 +193,12 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # print screen (requires shutter)
 bindsym Print exec --no-startup-id shutter -s # capture selection
+
+
+
+
+
+### workspace assignment
+
+# Hangouts - workspace 4
+#for_window [class="Google-chrome" instance="crx_nckgahadagoaajjgafhacjanaoiihapd"] move container to workspace 4
