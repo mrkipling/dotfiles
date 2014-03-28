@@ -151,6 +151,9 @@ bar {
 # you might want to comment this out if you're only using one monitor!
 #exec --no-startup-id xrandr --output DVI-1 --auto --right-of DVI-0
 
+# blank monitor(s) after 10 minutes
+exec --no-startup-id xset dpms 0 0 600
+
 # set backlight
 exec --no-startup-id xbacklight -set 30
 
