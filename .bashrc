@@ -10,8 +10,8 @@ alias delpyc='find -name "*.pyc" -delete'
 # Custom functions
 
 function fname() { find . -iname "*$@*"; }
-function dumpdb { mysqldump -u root --databases $1 > ~/db_dumps/$2; }
-function restoredb { cat ~/db_dumps/$1 | mysql -uroot $2; }
+function dumpdb { mysqldump -u root -p --databases $1 > ~/db_dumps/$2; }
+function restoredb { cat ~/db_dumps/$1 | mysql -uroot -p $2; }
 
 # GPG
 
