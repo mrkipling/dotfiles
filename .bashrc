@@ -13,6 +13,9 @@ function fname() { find . -iname "*$@*"; }
 function dumpdb { mysqldump -u root -p --databases $1 > ~/db_dumps/$2; }
 function restoredb { cat ~/db_dumps/$1 | mysql -uroot -p $2; }
 
+function tarup { tar -zcvf $1.tar.gz $1; }
+function untar { tar -xzvf $1; }
+
 # GPG
 
 alias gpg-import='gpg --import ~/Downloads/address.txt'
