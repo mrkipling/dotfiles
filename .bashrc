@@ -6,6 +6,7 @@
 alias ls='ls -alh --color'
 alias sc='screen -dR'
 alias delpyc='find -name "*.pyc" -delete'
+alias optimise_jpgs='mkdir optimised; for i in *.JPG; do jpegoptim "$i" --max=80 --dest="optimised"; done'
 
 # Custom functions
 
@@ -16,7 +17,14 @@ function restoredb { cat ~/db_dumps/$1 | mysql -uroot -p $2; }
 function tarup { tar -zcvf $1.tar.gz $1; }
 function untar { tar -xzvf $1; }
 
-alias optimise_jpgs='mkdir optimised; for i in *.JPG; do jpegoptim "$i" --max=80 --dest="optimised"; done'
+# nginx
+
+alias ngrestart='sudo /etc/init.d/nginx restart'
+alias ngav='cd /etc/nginx/sites-available'
+alias ngen='cd /etc/nginx/sites-enabled'
+
+function ngenable { sudo ln -s /etc/nginx/sites-available/$1 /etc/nginx/sites-enabled; }
+function ngdisable { sudo rm /etc/nginx/sites-enabled/$1; }
 
 # GPG
 
