@@ -69,6 +69,13 @@
 (require 'django-html-mode)
 (add-to-list 'auto-mode-alist '("\\.html$" . django-html-mode))
 
+;; 80 char column highlighting
+;; useful for git commit messages
+;; off by default, F8 toggles
+(require 'whitespace)
+(setq whitespace-style '(face empty tabs lines-tail trailing))
+(global-set-key [f8] 'global-whitespace-mode)
+
 
 
 
