@@ -76,6 +76,9 @@
 (setq whitespace-style '(face empty tabs lines-tail trailing))
 (global-set-key [f8] 'global-whitespace-mode)
 
+;; Ctrl-F8 toggles column number mode
+(global-set-key [C-f8] 'column-number-mode)
+
 
 
 
