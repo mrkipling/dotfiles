@@ -69,6 +69,10 @@
 (require 'django-html-mode)
 (add-to-list 'auto-mode-alist '("\\.html$" . django-html-mode))
 
+;; autocomplete mode
+;;(require 'init-auto-complete)
+;;(ac-config-default)
+
 ;; 80 char column highlighting
 ;; useful for git commit messages
 ;; off by default, F8 toggles
