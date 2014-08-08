@@ -6,6 +6,7 @@
 alias ls='ls -alh --color'
 alias sc='screen -dR'
 alias delpyc='find -name "*.pyc" -delete'
+alias crontab='crontab -i' # confirm before deleting crontab
 alias optimise_jpgs='mkdir optimised; for i in *.JPG; do jpegoptim "$i" --max=80 --dest="optimised"; done'
 
 # Custom functions
