@@ -42,6 +42,12 @@
 (setq auto-save-file-name-transforms
      `((".*" ,user-temporary-file-directory t)))
 
+;; MELPA
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+
 ;; show trailing whitespace by default
 (setq-default show-trailing-whitespace t)
 
