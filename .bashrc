@@ -7,6 +7,7 @@ alias ls='ls -alh --color'
 alias sc='screen -dR'
 alias delpyc='find -name "*.pyc" -delete'
 alias crontab='crontab -i' # confirm before deleting crontab
+alias upd='sudo apt-get update && sudo apt-get dist-upgrade'
 alias optimise_jpgs='mkdir optimised; for i in *.JPG; do jpegoptim "$i" --max=80 --dest="optimised"; done'
 
 function fname() { find . -iname "*$@*"; }
