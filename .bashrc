@@ -1,15 +1,13 @@
 # This is a not complete .bashrc file!
 # Append this stuff as required
 
-# Custom aliases
+# Custom aliases and functions
 
 alias ls='ls -alh --color'
 alias sc='screen -dR'
 alias delpyc='find -name "*.pyc" -delete'
 alias crontab='crontab -i' # confirm before deleting crontab
 alias optimise_jpgs='mkdir optimised; for i in *.JPG; do jpegoptim "$i" --max=80 --dest="optimised"; done'
-
-# Custom functions
 
 function fname() { find . -iname "*$@*"; }
 function dumpdb { mysqldump -u root -p --databases $1 > ~/db_dumps/$2; }
@@ -55,3 +53,7 @@ function cp_p() {
          }
          END { print "" }' total_size=$(stat -c '%s' "${1}") count=0
 }
+
+# upload a file for temporary (2 week) sharing via http://transfer.sh/
+function transfer() { curl --upload-file ./$1 https://transfer.sh/$1; }
+alias transfer=transfer
