@@ -151,8 +151,11 @@ bar {
 # you might want to comment this out if you're only using one monitor!
 #exec --no-startup-id xrandr --output DVI-1 --auto --right-of DVI-0
 
-# blank monitor(s) after 10 minutes
-exec --no-startup-id xset dpms 0 0 600
+# blank monitor(s) after 5 minutes
+exec --no-startup-id xset dpms 0 0 300
+
+# auto-lock computer after 6 minutes
+exec --no-startup-id xautolock -detectsleep -time 6 -locker i3lock
 
 # set backlight
 exec --no-startup-id xbacklight -set 30
