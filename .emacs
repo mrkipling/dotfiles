@@ -57,6 +57,9 @@
 ;; get rid of initial scratch message
 (setq initial-scratch-message nil)
 
+;; typing 'yes' or 'no' is annoying, let's use 'y' or 'n' instead
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 
 
 
