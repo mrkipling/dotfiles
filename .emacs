@@ -47,6 +47,9 @@
 ;; get rid of initial scratch message
 (setq initial-scratch-message nil)
 
+;; don't wait for ages before displaying keystrokes
+(setq echo-keystrokes 0.1)
+
 ;; typing 'yes' or 'no' is annoying, let's use 'y' or 'n' instead
 (defalias 'yes-or-no-p 'y-or-n-p)
 
