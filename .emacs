@@ -29,18 +29,8 @@
 ;;(load-theme 'solarized-light)
 ;;(load-theme 'solarized-dark)
 
-;; Store temporary files out of current directory
-(defvar user-temporary-file-directory
- "~/.emacs.tmp/backups")
-(make-directory user-temporary-file-directory t)
-(setq backup-by-copying t)
-(setq backup-directory-alist
-     `(("." . ,user-temporary-file-directory)
-       (,tramp-file-name-regexp nil)))
-(setq auto-save-list-file-prefix
-     (concat user-temporary-file-directory "/auto-saves-"))
-(setq auto-save-file-name-transforms
-     `((".*" ,user-temporary-file-directory t)))
+;; turn off backup files (they're pretty annoying)
+(setq make-backup-files nil)
 
 ;; MELPA
 (require 'package)
