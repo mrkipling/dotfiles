@@ -88,6 +88,14 @@
 ;; Ctrl-F8 toggles column number mode
 (global-set-key [C-f8] 'column-number-mode)
 
+;; activate smerge-mode if it looks like there's a merge conflict in the file
+(defun sm-try-smerge ()
+  (save-excursion
+    (goto-char (point-min))
+    (when (re-search-forward "^<<<<<<< " nil t)
+      (smerge-mode 1))))
+(add-hook 'find-file-hook 'sm-try-smerge t)
+
 
 
 
