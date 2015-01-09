@@ -24,11 +24,6 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
-;; load color theme
-(load-theme 'dark-laptop)
-;;(load-theme 'solarized-light)
-;;(load-theme 'solarized-dark)
-
 ;; turn off backup files (they're pretty annoying)
 (setq make-backup-files nil)
 
@@ -52,6 +47,14 @@
 
 ;; typing 'yes' or 'no' is annoying, let's use 'y' or 'n' instead
 (defalias 'yes-or-no-p 'y-or-n-p)
+
+;; load color theme
+(load-theme 'dark-laptop)
+;;(load-theme 'solarized-light)
+;;(load-theme 'solarized-dark)
+
+;; this is the theme you actually want; install using MELPA
+;;(load-theme 'sanityinc-tomorrow-night)
 
 
 
