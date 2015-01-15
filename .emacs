@@ -54,7 +54,8 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; load color theme
-(use-package color-theme-sanityinc-tomorrow :ensure t)
+(use-package color-theme-sanityinc-tomorrow
+  :ensure t)
 (load-theme 'sanityinc-tomorrow-night)
 
 
