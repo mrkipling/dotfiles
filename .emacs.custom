@@ -1,0 +1,7 @@
+;; default font
+(set-face-attribute 'default nil :font "Inconsolata-12")
+
+;; disable exit emacs via C-x C-c (useful if not using in a terminal)
+(defun learn ()
+  (interactive))
+(global-set-key "\C-x\C-c" 'learn)

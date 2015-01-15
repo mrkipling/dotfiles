@@ -1,18 +1,21 @@
 ;; custom set variables
 (custom-set-variables
- '(css-indent-offset 4)
- '(custom-safe-themes (quote ("f07583bdbcca020adecb151868c33820dfe3ad5076ca96f6d51b1da3f0db7105" default)))
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-night)))
+ '(custom-safe-themes
+   (quote
+    ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
  '(indent-tabs-mode nil)
+ '(sgml-basic-offset 4)
+ '(standard-indent 4)
+ '(css-indent-offset 4)
  '(inhibit-startup-screen t)
  '(js2-mirror-mode nil)
  '(js2-mode-escape-quotes nil)
  '(menu-bar-mode nil)
  '(scroll-bar-mode nil)
  '(send-mail-function (quote smtpmail-send-it))
- '(sgml-basic-offset 4)
  '(smtpmail-smtp-server "smtp.gmail.com")
  '(smtpmail-smtp-service 25)
- '(standard-indent 4)
  '(tool-bar-mode nil)
  '(transient-mark-mode t))
 
@@ -109,8 +112,11 @@
 (global-set-key (kbd "C-<") 'decrease-left-margin)
 (global-set-key (kbd "C->") 'increase-left-margin)
 
-;; disable exit emacs via C-x C-c (useful if not using in a terminal)
-;;(defun learn ()
-;;  (interactive)
-;;  )
-;;(global-set-key "\C-x\C-c" 'learn)
+
+
+
+
+;;=== LOAD CUSTOM CONFIG ===;;
+
+(if (file-exists-p "~/.emacs.custom")
+    (load-file "~/.emacs.custom"))
