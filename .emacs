@@ -67,7 +67,8 @@
 (use-package web-mode
              :ensure t
              :mode (("\\.html\\'" . web-mode)
-                    ("\\.jinja\\'" . web-mode)))
+                    ("\\.jinja\\'" . web-mode)
+                    ("\\.jsx\\'" . web-mode)))
 
 (use-package js2-mode
              :ensure t
