@@ -7,6 +7,7 @@ File/folder           | Description
 .bashrc | bash config; place in home dir
 .gitconfig | git config; place in home dir
 .emacs | emacs config; place in home dir
+.emacs.custom | imported by .emacs, use it for machine-specific config if you want to symlink the main .emacs file in order to be able to easily update it; place in home dir
 .emacs.d/ | emacs config; place in home dir
 
 ## i3
