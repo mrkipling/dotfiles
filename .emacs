@@ -22,7 +22,6 @@
 
 ;; load paths
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 ;; turn off backup files (they're pretty annoying)
 (setq make-backup-files nil)
@@ -32,6 +31,9 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
+
+;; use-package
+(require 'use-package)
 
 ;; show trailing whitespace by default
 (setq-default show-trailing-whitespace t)
@@ -49,18 +51,16 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; load color theme
-(load-theme 'dark-laptop)
-;;(load-theme 'solarized-light)
-;;(load-theme 'solarized-dark)
-
-;; this is the theme you actually want; install using MELPA
-;;(load-theme 'sanityinc-tomorrow-night)
+(use-package color-theme-sanityinc-tomorrow :ensure t)
+(load-theme 'sanityinc-tomorrow-night)
 
 
 
 
 
 ;;=== CUSTOM MODES ===;;
+
+(use-package web-mode :ensure t)
 
 ;; js2-mode (advanced JavaScript mode)
 ;; https://github.com/mooz/js2-mode
@@ -73,10 +73,6 @@
 ;; Django HTML mode
 (require 'django-html-mode)
 (add-to-list 'auto-mode-alist '("\\.html$" . django-html-mode))
-
-;; autocomplete mode
-;;(require 'init-auto-complete)
-;;(ac-config-default)
 
 ;; 80 char column highlighting
 ;; useful for git commit messages
