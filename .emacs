@@ -90,6 +90,9 @@
 (use-package less-css-mode
   :ensure t)
 
+(use-package git-commit-mode
+  :ensure t)
+
 
 
 
