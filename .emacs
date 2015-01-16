@@ -125,6 +125,7 @@
 (use-package git-messenger
   :ensure t)
 (global-set-key [f9] 'git-messenger:popup-message)
+(setq git-messenger:show-detail t)
 
 ;; Ctrl-Shift-+ to move the cursor to the last place that changes were made in
 ;; the buffer (similar binding to the undo command, and has the same effect
