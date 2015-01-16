@@ -7,3 +7,7 @@
 (defun learn ()
   (interactive))
 (global-set-key "\C-x\C-c" 'learn)
+
+;; use web-mode if we're editing a .js file (which would normally use js2-mode) that
+;; starts wtih /** @jsx React.DOM */ as js2-mode doesn't support JSX
+(add-to-list 'magic-mode-alist '("\\/\\** @jsx React.DOM \\*/" . web-mode) )
