@@ -57,6 +57,9 @@
 ;; don't wait for ages before displaying keystrokes
 (setq echo-keystrokes 0.1)
 
+;; set default fill-column width to 80
+(setq-default fill-column 80)
+
 ;; typing 'yes' or 'no' is annoying, let's use 'y' or 'n' instead
 (defalias 'yes-or-no-p 'y-or-n-p)
 
