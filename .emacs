@@ -121,6 +121,11 @@
 ;; Ctrl-F8 toggles column number mode
 (global-set-key [C-f8] 'column-number-mode)
 
+;; F9: pop up last commit information for current line
+(use-package git-messenger
+  :ensure t)
+(global-set-key [f9] 'git-messenger:popup-message)
+
 ;; Ctrl-Shift-+ to move the cursor to the last place that changes were made in
 ;; the buffer (similar binding to the undo command, and has the same effect
 ;; apart from not undoing anything)
