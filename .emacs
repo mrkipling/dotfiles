@@ -118,7 +118,14 @@
 ;; Ctrl-F8 toggles column number mode
 (global-set-key [C-f8] 'column-number-mode)
 
-;; C-< and C-> to decrease/increase left margin
+;; Ctrl-Shift-+ to move the cursor to the last place that changes were made in
+;; the buffer (similar binding to the undo command, and has the same effect
+;; apart from not undoing anything)
+(use-package goto-last-change
+  :ensure t)
+(global-set-key (kbd "C-+") 'goto-last-change)
+
+;; C-Shift-< and C-Shift-> to decrease/increase left margin
 (global-set-key (kbd "C-<") 'decrease-left-margin)
 (global-set-key (kbd "C->") 'increase-left-margin)
 
