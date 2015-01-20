@@ -58,3 +58,10 @@ function cp_p() {
 # upload a file for temporary (2 week) sharing via http://transfer.sh/
 function transfer() { curl --upload-file ./$1 https://transfer.sh/$1; }
 alias transfer=transfer
+
+# 'inst' alias for sudo apt-get install, with autocompletion
+alias inst='sudo apt-get install'
+_apt_install_complete() {
+    mapfile -t COMPREPLY < <(apt-cache --no-generate pkgnames "$2");
+}
+complete -F _apt_install_complete inst
