@@ -41,7 +41,7 @@
 
 
 
-;;=== CONFIGURATION ===;;
+;;=== GENERAL CONFIGURATION ===;;
 
 ;; turn off backup files (they're pretty annoying)
 (setq make-backup-files nil)
@@ -63,19 +63,6 @@
 
 ;; typing 'yes' or 'no' is annoying, let's use 'y' or 'n' instead
 (defalias 'yes-or-no-p 'y-or-n-p)
-
-;; activate smerge-mode if it looks like there's a merge conflict in the file
-(use-package smerge-mode
-  :commands smerge-mode
-  :init
-  (progn
-    (setq smerge-command-prefix (kbd "C-c '"))
-    (defun sm-try-smerge ()
-      (save-excursion
-        (goto-char (point-min))
-        (when (re-search-forward "^<<<<<<< " nil t)
-          (smerge-mode 1))))
-    (add-hook 'find-file-hook 'sm-try-smerge)))
 
 
 
@@ -107,6 +94,19 @@
 
 (use-package git-commit-mode
   :ensure t)
+
+;; activate smerge-mode if it looks like there's a merge conflict in the file
+(use-package smerge-mode
+  :commands smerge-mode
+  :init
+  (progn
+    (setq smerge-command-prefix (kbd "C-c '"))
+    (defun sm-try-smerge ()
+      (save-excursion
+        (goto-char (point-min))
+        (when (re-search-forward "^<<<<<<< " nil t)
+          (smerge-mode 1))))
+    (add-hook 'find-file-hook 'sm-try-smerge)))
 
 
 
