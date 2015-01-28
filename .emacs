@@ -81,7 +81,13 @@
   :ensure t
   :mode (("\\.html\\'" . web-mode)
          ("\\.jinja\\'" . web-mode)
-         ("\\.jsx\\'" . web-mode)))
+         ("\\.jsx\\'" . web-mode))
+  :init
+  (progn
+    (setq web-mode-style-padding 4)
+    (setq web-mode-script-padding 4)
+    (setq web-mode-enable-auto-pairing nil)
+    (setq web-mode-enable-auto-closing nil)))
 
 (use-package js2-mode
   :ensure t
