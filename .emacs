@@ -127,8 +127,7 @@
 (use-package whitespace
   :bind ("<f8>" . whitespace-mode)
   :config
-  (setq whitespace-style '(face empty tabs lines-tail trailing))
-  :diminish whitespace-mode)
+  (setq whitespace-style '(face empty tabs lines-tail trailing)))
 
 ;; Ctrl-F8: toggle column number mode
 (global-set-key [C-f8] 'column-number-mode)
