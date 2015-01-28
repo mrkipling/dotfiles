@@ -33,8 +33,9 @@
 
 ;; load color theme
 (use-package color-theme-sanityinc-tomorrow
-  :ensure t)
-(load-theme 'sanityinc-tomorrow-night)
+  :ensure t
+  :init
+  (load-theme 'sanityinc-tomorrow-night))
 
 
 
@@ -64,12 +65,17 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; activate smerge-mode if it looks like there's a merge conflict in the file
-(defun sm-try-smerge ()
-  (save-excursion
-    (goto-char (point-min))
-    (when (re-search-forward "^<<<<<<< " nil t)
-      (smerge-mode 1))))
-(add-hook 'find-file-hook 'sm-try-smerge t)
+(use-package smerge-mode
+  :commands smerge-mode
+  :init
+  (progn
+    (setq smerge-command-prefix (kbd "C-c '"))
+    (defun sm-try-smerge ()
+      (save-excursion
+        (goto-char (point-min))
+        (when (re-search-forward "^<<<<<<< " nil t)
+          (smerge-mode 1))))
+    (add-hook 'find-file-hook 'sm-try-smerge)))
 
 
 
@@ -117,28 +123,29 @@
 ;; F7: delete trailing whitespace
 (global-set-key [f7] 'delete-trailing-whitespace)
 
-;; 80 char column highlighting
-;; useful for git commit messages
-;; off by default, F8 toggles
-(require 'whitespace)
-(setq whitespace-style '(face empty tabs lines-tail trailing))
-(global-set-key [f8] 'global-whitespace-mode)
+;; F8: whitespace-mode (80 char column highlighting)
+(use-package whitespace
+  :bind ("<f8>" . whitespace-mode)
+  :config
+  (setq whitespace-style '(face empty tabs lines-tail trailing))
+  :diminish whitespace-mode)
 
-;; Ctrl-F8 toggles column number mode
+;; Ctrl-F8: toggle column number mode
 (global-set-key [C-f8] 'column-number-mode)
 
 ;; F9: pop up last commit information for current line
 (use-package git-messenger
-  :ensure t)
-(global-set-key [f9] 'git-messenger:popup-message)
-(setq git-messenger:show-detail t)
+  :ensure t
+  :bind ("<f9>" . git-messenger:popup-message)
+  :config
+  (setq git-messenger:show-detail t))
 
-;; Ctrl-Shift-+ to move the cursor to the last place that changes were made in
+;; Ctrl-Shift-+: move the cursor to the last place that changes were made in
 ;; the buffer (similar binding to the undo command, and has the same effect
 ;; apart from not undoing anything)
 (use-package goto-last-change
-  :ensure t)
-(global-set-key (kbd "C-+") 'goto-last-change)
+  :ensure t
+  :bind ("C-+" . goto-last-change))
 
 ;; C-Shift-< and C-Shift-> to decrease/increase left margin
 (global-set-key (kbd "C-<") 'decrease-left-margin)
