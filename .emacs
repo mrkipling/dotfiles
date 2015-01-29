@@ -123,6 +123,13 @@
 ;; F7: delete trailing whitespace
 (global-set-key [f7] 'delete-trailing-whitespace)
 
+;; Ctrl-F7: toggle show trailing whitespace
+(defun tf-toggle-show-trailing-whitespace ()
+  (interactive)
+  (setq show-trailing-whitespace (not show-trailing-whitespace))
+  (redraw-display))
+(global-set-key [C-f7] 'tf-toggle-show-trailing-whitespace)
+
 ;; F8: whitespace-mode (80 char column highlighting)
 (use-package whitespace
   :bind ("<f8>" . whitespace-mode)
