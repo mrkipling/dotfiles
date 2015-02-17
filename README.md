@@ -23,6 +23,7 @@ pavol | copy to /usr/local/sbin
 
 File/folder           | Description
 --------------------- | -----------
+.config/terminator/config | Terminator configuration
 .conkyrc | Conky configuration
 .conky/ | Conky scripts (edit with login details, place in home dir)
 .xmodmap | turns Caps Lock into an extra Left Ctrl key (if using xmodmap)
