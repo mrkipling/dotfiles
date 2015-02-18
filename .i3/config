@@ -147,6 +147,9 @@ bar {
 ### added by me ###
 ###################
 
+# niceness provided by gnome-settings-daemon (volume keys, etc.)
+exec --no-startup-id gnome-settings-daemon
+
 # multiple monitors with correct orientation
 # you might want to comment this out if you're only using one monitor!
 #exec --no-startup-id xrandr --output DVI-1 --auto --right-of DVI-0
