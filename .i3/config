@@ -209,18 +209,29 @@ bindsym XF86AudioMute exec --no-startup-id pavol -t  && killall -SIGUSR1 i3statu
 bindsym Print exec --no-startup-id shutter -s # capture selection
 for_window [class="Shutter" instance="shutter"] floating enable
 
-# application shortcuts
-bindsym XF86HomePage exec google-chrome # or chromium
-bindsym XF86Calculator exec xcalc
+
+
+
+
+### keyboard shortcuts to start applications
+
+bindsym XF86HomePage exec google-chrome
+
+bindsym XF86Calculator exec gnome-calculator
+#bindsym XF86Calculator exec xcalc
+
+bindsym XF86Search exec nautilus
+#bindsym XF86Search exec thunar
 
 
 
 
 
-### application specific
+### application specific config
 
 # Hangouts - workspace 4, floating enabled
 #for_window [class="Google-chrome" instance="crx_nckgahadagoaajjgafhacjanaoiihapd"] floating enable, move container to workspace number 4
 
-# enable floating for xcalc
+# enable floating for calculators
+for_window [class="Gnome-calculator" instance="gnome-calculator"] floating enable
 for_window [class="XCalc" instance="xcalc"] floating enable
