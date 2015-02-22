@@ -17,7 +17,6 @@ File/folder           | Description
 .i3/ | i3wm config
 .i3status.conf | i3wm status bar config
 i3exit | copy to /usr/local/sbin
-pavol | copy to /usr/local/sbin
 
 ## Misc
 
