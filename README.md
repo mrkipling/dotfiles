@@ -29,3 +29,4 @@ File/folder           | Description
 .screenrc | makes GNU Screen far more awesome; place in home dir
 irssi-hilightwin.pl | Place in ~/.irssi/scripts/autorun/ (if using irssi)
 Inconsolata.otf | Monospaced font for coding
+Inconsolata for Powerline.otf | Monospaced font for terminal when using Powerline style
