@@ -162,6 +162,12 @@
 (global-set-key (kbd "C-<") 'decrease-left-margin)
 (global-set-key (kbd "C->") 'increase-left-margin)
 
+;; disable exit emacs via C-x C-c if not in a terminal
+(defun learn ()
+  (interactive))
+(if window-system
+  (global-set-key "\C-x\C-c" 'learn))
+
 
 
 
