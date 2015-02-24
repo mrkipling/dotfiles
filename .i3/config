@@ -221,6 +221,10 @@ bindsym XF86Calculator exec gnome-calculator
 bindsym XF86Search exec nautilus
 #bindsym XF86Search exec thunar
 
+# N.B. if using Nautilus as file manager, be sure to run this in order to get
+# rid of the desktop window that opens and cannot be closed:
+# gsettings set org.gnome.desktop.background show-desktop-icons false
+
 
 
 
