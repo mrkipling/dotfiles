@@ -152,8 +152,11 @@
   :config
   (setq git-messenger:show-detail t))
 
-;; F12: web-mode (useful if the highlighting stops working)
-(global-set-key [f12] 'web-mode)
+;;      F12: js2-mode
+;; Ctrl-F12: web-mode
+;; (useful if the highlighting stops working)
+(global-set-key [f12] 'js2-mode)
+(global-set-key [C-f12] 'web-mode)
 
 ;; Ctrl-Shift-+: move the cursor to the last place that changes were made in
 ;; the buffer (similar binding to the undo command, and has the same effect
