@@ -7,3 +7,21 @@
 ;; starts with /** @jsx React.DOM */ as js2-mode doesn't support JSX.
 ;; This is mostly for the benefit of Streetlife, hence why it is in .emacs.custom.
 (add-to-list 'magic-mode-alist '("\\/\\** @jsx React.DOM \\*/" . web-mode) )
+
+;; flycheck - on the fly linting
+;; Disabled by default because it can be a bit intense, but it's great if you need
+;; to hunt down globals.
+;; Remember to `npm install -g eslint babel-eslint eslint-plugin-react`
+;;
+;;(use-package flycheck
+;;  :ensure t
+;;  :init
+;;  (progn
+;;    (setq-default flycheck-disabled-checkers
+;;      (append flycheck-disabled-checkers '(javascript-jshint)))
+;;    (setq-default flycheck-disabled-checkers
+;;      (append flycheck-disabled-checkers '(json-jsonlist)))
+;;    (add-hook 'after-init-hook #'global-flycheck-mode)
+;;    (flycheck-add-mode 'javascript-eslint 'web-mode)
+;;    (global-set-key [s-f11] 'flycheck-previous-error)
+;;    (global-set-key [s-f12] 'flycheck-next-error)))
