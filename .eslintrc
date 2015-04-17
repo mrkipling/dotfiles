@@ -2,20 +2,12 @@
     "parser": "babel-eslint",
     "env": {
         "browser": true,
-        "amd": true,
         "es6": true
     },
     "plugins": [
         "react"
     ],
     "globals": {
-        "Helpers": true,
-        "Data": true,
-        "Settings": true,
-        "Nav": true,
-        "$": true,
-        "_log": true,
-        "module": true
     },
     "ecmaFeatures": {
         "arrowFunctions": true,
