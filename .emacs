@@ -28,6 +28,11 @@
              '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
 
+;; bootstrap `use-package'
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
 ;; use-package
 (require 'use-package)
 
