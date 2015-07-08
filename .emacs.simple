@@ -1,0 +1,134 @@
+;; custom set variables
+(custom-set-variables
+ '(indent-tabs-mode nil)
+ '(sgml-basic-offset 4)
+ '(standard-indent 4)
+ '(css-indent-offset 4)
+ '(inhibit-startup-screen t)
+ '(menu-bar-mode nil)
+ '(scroll-bar-mode nil)
+ '(tool-bar-mode nil)
+ '(transient-mark-mode t))
+
+;; load paths
+(add-to-list 'load-path "~/.emacs.d/site-lisp/")
+
+;; MELPA
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+(package-initialize)
+
+;; bootstrap `use-package'
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+;; use-package
+(require 'use-package)
+
+
+
+
+
+;;=== GENERAL CONFIGURATION ===;;
+
+;; turn off backup files (they're pretty annoying)
+(setq make-backup-files nil)
+
+;; show trailing whitespace by default
+(setq-default show-trailing-whitespace t)
+
+;; new files should use UNIX line endings
+(setq default-buffer-file-coding-system 'unix)
+
+;; get rid of initial scratch message
+(setq initial-scratch-message nil)
+
+;; don't wait for ages before displaying keystrokes
+(setq echo-keystrokes 0.1)
+
+;; set default fill-column width to 80
+(setq-default fill-column 80)
+
+;; typing 'yes' or 'no' is annoying, let's use 'y' or 'n' instead
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+
+
+
+
+;;=== CUSTOM MODES ===;;
+
+(use-package web-mode
+  :ensure t
+  :mode (("\\.html\\'" . web-mode)
+         ("\\.jinja\\'" . web-mode)
+         ("\\.jsx\\'" . web-mode))
+  :init
+  (progn
+    (setq web-mode-style-padding 4)
+    (setq web-mode-script-padding 4)
+    (setq web-mode-enable-auto-pairing nil)
+    (setq web-mode-enable-auto-closing nil)
+    (setq web-mode-enable-auto-quoting nil)
+    (defadvice web-mode-highlight-part (around tweak-jsx activate)
+      (if (equal web-mode-content-type "jsx")
+          (let ((web-mode-enable-part-face nil))
+            ad-do-it)
+        ad-do-it))))
+
+
+
+
+
+;;=== KEYBOARD SHORTCUTS ===;;
+
+;; F5: goto line
+(global-set-key [f5] 'goto-line)
+
+;; F6: query replace
+(global-set-key [f6] 'query-replace)
+
+;; F7: delete trailing whitespace
+(global-set-key [f7] 'delete-trailing-whitespace)
+
+;; Ctrl-F7: toggle show trailing whitespace
+(defun tf-toggle-show-trailing-whitespace ()
+  (interactive)
+  (setq show-trailing-whitespace (not show-trailing-whitespace))
+  (redraw-display))
+(global-set-key [C-f7] 'tf-toggle-show-trailing-whitespace)
+
+;; F8: whitespace-mode (80 char column highlighting)
+(use-package whitespace
+  :bind ("<f8>" . whitespace-mode)
+  :config
+  (setq whitespace-style '(face empty tabs lines-tail trailing)))
+
+;; Ctrl-F8: toggle column number mode
+(global-set-key [C-f8] 'column-number-mode)
+
+;; Ctrl-F12: web-mode
+;; (useful if the highlighting stops working)
+(global-set-key [C-f12] 'web-mode)
+
+;; Ctrl-Shift-+: move the cursor to the last place that changes were made in
+;; the buffer (similar binding to the undo command, and has the same effect
+;; apart from not undoing anything)
+(use-package goto-last-change
+  :ensure t
+  :bind ("C-+" . goto-last-change))
+
+;; C-Shift-< and C-Shift-> to decrease/increase left margin
+(global-set-key (kbd "C-<") 'decrease-left-margin)
+(global-set-key (kbd "C->") 'increase-left-margin)
+
+
+
+
+
+;;=== LOAD CUSTOM CONFIG ===;;
+
+(if (file-exists-p "~/.emacs.custom")
+    (load-file "~/.emacs.custom"))
