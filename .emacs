@@ -103,8 +103,9 @@
 (use-package markdown-mode
   :ensure t)
 
-(use-package git-commit-mode
-  :ensure t)
+;; Temporarily commented out as this seems to be unavailable
+;;(use-package git-commit-mode
+;;  :ensure t)
 
 ;; activate smerge-mode if it looks like there's a merge conflict in the file
 (use-package smerge-mode
