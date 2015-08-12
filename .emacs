@@ -77,7 +77,7 @@
 
 (use-package web-mode
   :ensure t
-  :mode (("\\.html$'" . web-mode)
+  :mode (("\\.html$" . web-mode)
          ("\\.jsx\\'" . web-mode))
   :init
   (progn
@@ -95,7 +95,7 @@
 (use-package jinja2-mode
   :ensure t
   :mode (("\\.jinja\\'" . jinja2-mode)
-         ("\\.jinja.html$'" . jinja2-mode)))
+         ("\\.jinja.html$" . jinja2-mode)))
 
 (use-package js2-mode
   :ensure t
