@@ -77,9 +77,8 @@
 
 (use-package web-mode
   :ensure t
-  :mode (("\\.html\\'" . web-mode)
-         ("\\.jinja\\'" . web-mode)
-         ("\\.jsx\\'" . web-mode))
+  :mode (("\\.html$" . web-mode)
+         ("\\.jsx\\" . web-mode))
   :init
   (progn
     (setq web-mode-style-padding 4)
@@ -92,6 +91,11 @@
           (let ((web-mode-enable-part-face nil))
             ad-do-it)
         ad-do-it))))
+
+(use-package jinja2-mode
+  :ensure t
+  :mode (("\\.jinja\\" . jinja2-mode)
+         ("\\.jinja.html$" . jinja2-mode)))
 
 (use-package js2-mode
   :ensure t
