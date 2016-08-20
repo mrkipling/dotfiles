@@ -78,6 +78,7 @@
 (use-package web-mode
   :ensure t
   :mode (("\\.html$" . web-mode)
+         ("\\.js\\'" . web-mode)
          ("\\.jsx\\'" . web-mode))
   :init
   (progn
@@ -90,7 +91,12 @@
       (if (equal web-mode-content-type "jsx")
           (let ((web-mode-enable-part-face nil))
             ad-do-it)
-        ad-do-it))))
+        ad-do-it))
+    (add-hook 'web-mode-hook
+      (lambda ()
+        (if (equal web-mode-content-type "javascript")
+        (web-mode-set-content-type "jsx")
+        (message "now set to: %s" web-mode-content-type))))))
 
 (use-package jinja2-mode
   :ensure t
@@ -98,8 +104,7 @@
          ("\\.jinja.html$" . jinja2-mode)))
 
 (use-package js2-mode
-  :ensure t
-  :mode (("\\.js$" . js2-mode)))
+  :ensure t)
 
 (use-package less-css-mode
   :ensure t)
