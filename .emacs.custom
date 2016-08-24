@@ -25,3 +25,8 @@
 ;;    (flycheck-add-mode 'javascript-eslint 'web-mode)
 ;;    (global-set-key [s-f11] 'flycheck-previous-error)
 ;;    (global-set-key [s-f12] 'flycheck-next-error)))
+
+;; disable lock files
+;; this stops .#annoying files from being created
+;; https://www.reddit.com/r/emacs/comments/4398wl/this_is_driving_me_nuts_emacs_will_not_let_me/
+;;(setq create-lockfiles nil)
