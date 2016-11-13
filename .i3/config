@@ -277,4 +277,4 @@ bindsym $mod+Home mode "$mode_system"
 #  -bg        "#222222"  -fg        "#888888" \
 #  -hlbg      "#285577"  -hlfg      "#FFFFFF" \
 #  -bg-active "#222222"  -fg-active "#2288DD" \
-#  -font      "Roboto Slab 12"   -opactiy 80
+#  -font      "Inconsolata Medium 12"   -opactiy 80
