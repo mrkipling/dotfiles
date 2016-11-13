@@ -25,6 +25,7 @@ bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "snap 12" -bg "#222222" -fg "#888888" -hlbg "#285577" -hlfg "#ffffff" -opacity 90 -m -1 -location 2'
 
 # change focus
 bindsym $mod+j focus left
@@ -238,3 +239,42 @@ bindsym XF86Search exec thunar
 # enable floating for calculators
 for_window [class="Gnome-calculator" instance="gnome-calculator"] floating enable
 for_window [class="XCalc" instance="xcalc"] floating enable
+
+
+
+
+
+# System mode
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+     bindsym l exec --no-startup-id ~/scripts/i3exit.sh lock, mode "default"
+     bindsym e exec --no-startup-id ~/scripts/i3exit.sh logout, mode "default"
+     bindsym s exec --no-startup-id ~/scripts/i3exit.sh suspend, mode "default"
+     bindsym h exec --no-startup-id ~/scripts/i3exit.sh hibernate, mode "default"
+     bindsym r exec --no-startup-id ~/scripts/i3exit.sh reboot, mode "default"
+     bindsym Shift+s exec --no-startup-id sh ~/scripts/i3exit.sh shutdown, mode "default"
+
+     # back to normal: Enter or Escape
+     bindsym Return mode "default"
+     bindsym Escape mode "default"
+}
+
+bindsym $mod+Home mode "$mode_system"
+
+
+
+
+
+# Task switcher - rofi
+
+#bindsym Mod1+Tab \
+#  exec rofi \
+#  -show window -terminal terminator -hide-scrollbar true  \
+#  -line-margin 0 -lines 20 -eh 1 -width 40 -bw 3 \
+#  -kb-mode-next      Alt+Tab \
+#  -kb-mode-previous  Alt+Control+Tab \
+#  -bg        "#222222"  -fg        "#888888" \
+#  -hlbg      "#285577"  -hlfg      "#FFFFFF" \
+#  -bg-active "#222222"  -fg-active "#2288DD" \
+#  -font      "Roboto Slab 12"   -opactiy 80
