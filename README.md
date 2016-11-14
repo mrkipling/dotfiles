@@ -16,7 +16,7 @@ File/folder           | Description
 --------------------- | -----------
 .i3/ | i3wm config
 .i3status.conf | i3wm status bar config
-i3exit.sh | copy to ~/scripts
+i3exit.sh | copy to `~/.i3/scripts/`
 
 ## Misc
 
@@ -27,6 +27,6 @@ File/folder           | Description
 .conky/ | Conky scripts (edit with login details, place in home dir)
 .xmodmap | turns Caps Lock into an extra Left Ctrl key (if using xmodmap)
 .screenrc | makes GNU Screen far more awesome; place in home dir
-irssi-hilightwin.pl | Place in ~/.irssi/scripts/autorun/ (if using irssi)
+irssi-hilightwin.pl | Place in `~/.irssi/scripts/autorun/` (if using irssi)
 Inconsolata.otf | Monospaced font for coding
 Inconsolata for Powerline.otf | Monospaced font for terminal when using Powerline style

@@ -248,12 +248,12 @@ for_window [class="XCalc" instance="xcalc"] floating enable
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-     bindsym l exec --no-startup-id ~/scripts/i3exit.sh lock, mode "default"
-     bindsym e exec --no-startup-id ~/scripts/i3exit.sh logout, mode "default"
-     bindsym s exec --no-startup-id ~/scripts/i3exit.sh suspend, mode "default"
-     bindsym h exec --no-startup-id ~/scripts/i3exit.sh hibernate, mode "default"
-     bindsym r exec --no-startup-id ~/scripts/i3exit.sh reboot, mode "default"
-     bindsym Shift+s exec --no-startup-id sh ~/scripts/i3exit.sh shutdown, mode "default"
+     bindsym l exec --no-startup-id ~/.i3/scripts/i3exit.sh lock, mode "default"
+     bindsym e exec --no-startup-id ~/.i3/scripts/i3exit.sh logout, mode "default"
+     bindsym s exec --no-startup-id ~/.i3/scripts/i3exit.sh suspend, mode "default"
+     bindsym h exec --no-startup-id ~/.i3/scripts/i3exit.sh hibernate, mode "default"
+     bindsym r exec --no-startup-id ~/.i3/scripts/i3exit.sh reboot, mode "default"
+     bindsym Shift+s exec --no-startup-id sh ~/.i3/scripts/i3exit.sh shutdown, mode "default"
 
      # back to normal: Enter or Escape
      bindsym Return mode "default"
