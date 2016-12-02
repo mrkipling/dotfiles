@@ -112,6 +112,8 @@
 (use-package markdown-mode
   :ensure t)
 
+(use-package typescript-mode)
+
 ;; Temporarily commented out as this seems to be unavailable
 ;;(use-package git-commit-mode
 ;;  :ensure t)
