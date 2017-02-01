@@ -103,6 +103,11 @@
   :mode (("\\.jinja\\'" . jinja2-mode)
          ("\\.jinja.html$" . jinja2-mode)))
 
+(use-package json-mode
+  :ensure t
+  :mode (("\\.eslintrc$" . json-mode)
+         ("\\.json$" . json-mode)))
+
 (use-package js2-mode
   :ensure t)
 
