@@ -1,3 +1,6 @@
+;; default indentation level (used everywhere)
+(setq default-indentation-level 4)
+
 ;; custom set variables
 (custom-set-variables
  '(custom-enabled-themes (quote (sanityinc-tomorrow-night)))
@@ -5,9 +8,9 @@
    (quote
     ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
  '(indent-tabs-mode nil)
- '(sgml-basic-offset 4)
- '(standard-indent 4)
- '(css-indent-offset 4)
+ '(sgml-basic-offset default-indentation-level)
+ '(standard-indent default-indentation-level)
+ '(css-indent-offset default-indentation-level)
  '(inhibit-startup-screen t)
  '(js2-mirror-mode nil)
  '(js2-mode-escape-quotes nil)
@@ -82,8 +85,8 @@
          ("\\.jsx\\'" . web-mode))
   :init
   (progn
-    (setq web-mode-style-padding 4)
-    (setq web-mode-script-padding 4)
+    (setq web-mode-style-padding default-indentation-level)
+    (setq web-mode-script-padding default-indentation-level)
     (setq web-mode-enable-auto-pairing nil)
     (setq web-mode-enable-auto-closing nil)
     (setq web-mode-enable-auto-quoting nil)
