@@ -12,8 +12,6 @@
  '(standard-indent default-indentation-level)
  '(css-indent-offset default-indentation-level)
  '(inhibit-startup-screen t)
- '(js2-mirror-mode nil)
- '(js2-mode-escape-quotes nil)
  '(menu-bar-mode nil)
  '(scroll-bar-mode nil)
  '(send-mail-function (quote smtpmail-send-it))
@@ -111,9 +109,6 @@
   :mode (("\\.eslintrc$" . json-mode)
          ("\\.json$" . json-mode)))
 
-(use-package js2-mode
-  :ensure t)
-
 (use-package less-css-mode
   :ensure t)
 
@@ -180,11 +175,8 @@
   :config
   (setq git-messenger:show-detail t))
 
-;;      F12: js2-mode
-;; Ctrl-F12: web-mode
-;; (useful if the highlighting stops working)
-(global-set-key [f12] 'js2-mode)
-(global-set-key [C-f12] 'web-mode)
+;; F12: web-mode
+(global-set-key [f12] 'web-mode)
 
 ;; Ctrl-Shift-+: move the cursor to the last place that changes were made in
 ;; the buffer (similar binding to the undo command, and has the same effect
