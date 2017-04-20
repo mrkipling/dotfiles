@@ -238,7 +238,7 @@ exec --no-startup-id google-chrome
 
 bindsym XF86HomePage exec google-chrome
 bindsym XF86Calculator exec gnome-calculator
-bindsym XF86Search exec thunar
+bindsym XF86Search exec nautilus --no-desktop
 bindsym XF86Tools exec spotify
 
 # N.B. If using Nautilus as file manager, be sure to run this in order to get
