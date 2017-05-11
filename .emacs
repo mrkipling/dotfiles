@@ -3,20 +3,21 @@
 
 ;; custom set variables
 (custom-set-variables
+ '(css-indent-offset default-indentation-level)
  '(custom-enabled-themes (quote (sanityinc-tomorrow-night)))
  '(custom-safe-themes
    (quote
     ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
+ '(git-commit-fill-column 50)
  '(indent-tabs-mode nil)
- '(sgml-basic-offset default-indentation-level)
- '(standard-indent default-indentation-level)
- '(css-indent-offset default-indentation-level)
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
  '(scroll-bar-mode nil)
  '(send-mail-function (quote smtpmail-send-it))
+ '(sgml-basic-offset default-indentation-level)
  '(smtpmail-smtp-server "smtp.gmail.com")
  '(smtpmail-smtp-service 25)
+ '(standard-indent default-indentation-level)
  '(tool-bar-mode nil)
  '(transient-mark-mode t))
 
@@ -120,9 +121,8 @@
 
 (use-package typescript-mode)
 
-;; Temporarily commented out as this seems to be unavailable
-;;(use-package git-commit-mode
-;;  :ensure t)
+(use-package git-commit
+  :ensure t)
 
 ;; activate smerge-mode if it looks like there's a merge conflict in the file
 (use-package smerge-mode
