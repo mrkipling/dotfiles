@@ -252,6 +252,10 @@ bindsym XF86Tools exec spotify
 
 ### Application specific config
 
+# start an instance of Terminator in the scratchpad, hidden, at a size that I like
+exec --no-startup-id terminator -l KJ -T "Terminator"
+for_window [instance="terminator" title="Terminator"] floating enable, resize set 1170 810, move window to position 2295 120, move scratchpad
+
 # enable floating for calculators
 for_window [class="Gnome-calculator" instance="gnome-calculator"] floating enable
 for_window [class="XCalc" instance="xcalc"] floating enable
