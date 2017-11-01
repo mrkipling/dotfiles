@@ -1,5 +1,5 @@
 ;; default indentation level (used everywhere)
-(setq default-indentation-level 4)
+(setq default-indentation-level 2)
 
 ;; custom set variables
 (custom-set-variables
@@ -121,8 +121,8 @@
 
 (use-package typescript-mode)
 
-(use-package git-commit
-  :ensure t)
+;;(use-package git-commit
+;;  :ensure t)
 
 ;; activate smerge-mode if it looks like there's a merge conflict in the file
 (use-package smerge-mode
