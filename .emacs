@@ -96,6 +96,12 @@
         ad-do-it))
     (add-hook 'web-mode-hook
       (lambda ()
+        (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
+        (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))
+        (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
+        (add-to-list 'web-mode-indentation-params '("lineup-quotes" . nil))
+        (add-to-list 'web-mode-indentation-params '("lineup-ternary" . nil))
+        (add-to-list 'web-mode-indentation-params '("case-extra-offset" . nil))
         (if (equal web-mode-content-type "javascript")
         (web-mode-set-content-type "jsx")
         (message "now set to: %s" web-mode-content-type))))))
