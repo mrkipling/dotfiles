@@ -89,6 +89,9 @@
     (setq web-mode-enable-auto-pairing nil)
     (setq web-mode-enable-auto-closing nil)
     (setq web-mode-enable-auto-quoting nil)
+    (setq web-mode-engines-alist
+        '(("django"    . "\\.html\\'"))
+    )
     (defadvice web-mode-highlight-part (around tweak-jsx activate)
       (if (equal web-mode-content-type "jsx")
           (let ((web-mode-enable-part-face nil))
