@@ -183,6 +183,7 @@
 
 ;; F12: web-mode
 (global-set-key [f12] 'web-mode)
+(global-set-key [C-f12] 'text-mode)
 
 ;; Ctrl-Shift-+: move the cursor to the last place that changes were made in
 ;; the buffer (similar binding to the undo command, and has the same effect
