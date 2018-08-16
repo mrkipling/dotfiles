@@ -221,6 +221,11 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #i
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
+# Spotify media shortcut key bindings (requires playerctl)
+#bindsym XF86AudioPlay exec --no-startup-id playerctl --player spotify play-pause
+#bindsym XF86AudioNext exec --no-startup-id playerctl --player spotify next
+#bindsym XF86AudioPrev exec --no-startup-id playerctl --player spotify previous
+
 # print screen (requires shutter)
 bindsym Print exec --no-startup-id shutter -s # capture selection
 for_window [class="Shutter" instance="shutter"] floating enable
