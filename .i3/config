@@ -1,4 +1,4 @@
-### Basic configuration
+## Basic configuration
 
 set $mod Mod4
 
@@ -150,17 +150,23 @@ bar {
 
 
 
+### Monitors
+# this obviously needs to be configured first
+
+# set monitors
+#set $monitor1 eDP-1
+#set $monitor2 DP-2
+#set $monitor3 HDMI-1
+
 ### Multiple monitors with correct orientation
-### Leave commented out by default as i3 seems to figure out what to do, this is mostly for reference
 
-# dual external monitors
-#exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x312 --output DP-2 --auto --right-of eDP-1 --output HDMI-1 --auto --right-of DP-2
+# dual external monitors to the right of laptop
+#exec --no-startup-id xrandr --output $monitor1 --auto --pos 0x312 --output $monitor2 --auto --right-of $monitor1 --output $monitor3 --auto --right-of $monitor2
 
-# single external monitor, right of laptop
-#exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x312 --output HDMI-1 --auto --right-of eDP-1
-
-# single external monitor, above laptop
-#exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x0 --output HDMI-1 --auto --above eDP-1
+# open workspaces by default on appropriate displays
+#workspace $tag1 output $monitor1
+#workspace $tag2 output $monitor2
+#workspace $tag10 output $monitor3
 
 
 
@@ -310,19 +316,3 @@ bindsym Mod1+Tab \
              -hlbg      "#285577"  -hlfg      "#FFFFFF" \
              -bg-active "#222222"  -fg-active "#2288DD" \
              -font      "Inconsolata Medium 12"   -opactiy 80
-
-
-
-
-
-### Stuff that I will want to comment out if I'm not using my 3 display setup
-
-# set monitors
-set $monitor1 eDP-1-1
-set $monitor2 HDMI-1-1
-set $monitor3 DP-1-2
-
-# open workspaces by default on appropriate displays
-workspace $tag1 output $monitor1
-workspace $tag2 output $monitor2
-workspace $tag10 output $monitor3
