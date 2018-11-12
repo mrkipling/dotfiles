@@ -66,8 +66,8 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # workspace names
-set $tag1 "1: editor"
-set $tag2 "2: www"
+set $tag1 "1: www"
+set $tag2 "2: editor"
 set $tag3 "3: www"
 set $tag4 "4: dir"
 set $tag5 "5: win"
