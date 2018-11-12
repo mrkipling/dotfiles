@@ -66,15 +66,15 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # workspace names
-set $tag1 "1: www"
-set $tag2 "2: emacs"
+set $tag1 "1: editor"
+set $tag2 "2: www"
 set $tag3 "3: www"
 set $tag4 "4: dir"
 set $tag5 "5: win"
 set $tag6 "6"
 set $tag7 "7"
 set $tag8 "8"
-set $tag9 "9: www"
+set $tag9 "9: comms"
 set $tag10 "10: term"
 
 # switch to workspace
@@ -164,9 +164,9 @@ bar {
 #exec --no-startup-id xrandr --output $monitor1 --auto --pos 0x312 --output $monitor2 --auto --right-of $monitor1 --output $monitor3 --auto --right-of $monitor2
 
 # open workspaces by default on appropriate displays
-#workspace $tag1 output $monitor1
-#workspace $tag2 output $monitor2
-#workspace $tag10 output $monitor3
+#workspace $tag1 output $monitor3
+#workspace $tag9 output $monitor2
+#workspace $tag10 output $monitor1
 
 
 
@@ -180,6 +180,9 @@ exec --no-startup-id gnome-settings-daemon
 # blank monitor(s) after 10 minutes
 exec --no-startup-id xset dpms 0 0 600
 
+# set mouse pointer speed
+exec --no-startup-id xset m 4/2 4
+
 # auto-lock computer after 11 minutes
 exec --no-startup-id xautolock -detectsleep -time 11 -locker i3lock
 
@@ -188,6 +191,9 @@ exec --no-startup-id xbacklight -set 30
 
 # disable caps lock
 exec --no-startup-id xmodmap ~/.xmodmap
+
+# turn numlock on
+exec --no-startup-id numlockx on
 
 # start network manager applet
 exec --no-startup-id nm-applet &
@@ -242,7 +248,7 @@ bindsym $mod+minus scratchpad show
 
 # start an instance of Terminator in the scratchpad, hidden, at a size that I like
 exec --no-startup-id terminator -l KJ -T "Terminator"
-for_window [instance="terminator" title="Terminator"] move scratchpad, resize grow left 300, resize grow right 300, resize grow down 180, resize grow up 180
+for_window [instance="terminator" title="Terminator"] floating enable, resize set 1570 1110, move window to position 2385 120, move scratchpad
 
 # start an instance of Chrome, since I will always want it running (it will probably open multiple windows on start)
 exec --no-startup-id google-chrome
