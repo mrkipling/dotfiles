@@ -1,5 +1,5 @@
 [core]
-    editor = emacs
+    editor = emacs -nw
 
 [color]
     ui = true
